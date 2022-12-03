@@ -43,14 +43,14 @@ body:
     attributes:
       label: Python traceback
       description: Paste the traceback from any exception (if there was one) below.
-      render: markdown
       value: |
         <details>
         <summary><b>Python traceback:</b></summary>
         <p>
 
-        <!-- Paste the traceback from any exception (if there was one) in between the next two lines below -->
+        <!-- Paste the traceback from any exception (if there was one) in between the two triple quotes below -->
         ```
+
         ```
 
         </p>
