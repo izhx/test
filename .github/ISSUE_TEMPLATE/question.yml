@@ -36,7 +36,7 @@ body:
       value: |
         - AdaSeq Version (e.g., 1.0 or master):
         - ModelScope Version (e.g., 1.0 or master):
-        - PyTorch Version (e.g., 1.12.1)
+        - PyTorch Version (e.g., 1.12.1):
         - OS (e.g., Ubuntu 20.04):
         - Python version:
         - CUDA/cuDNN version:
