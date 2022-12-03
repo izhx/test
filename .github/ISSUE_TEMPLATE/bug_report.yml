@@ -42,17 +42,14 @@ body:
     id: traceback
     attributes:
       label: Python traceback
-      description: Paste the traceback from any exception (if there was one) below.
+      description: Paste the traceback from any exception (if there was one) in between the two triple quotes below.
       value: |
         <details>
-        <summary><b>Python traceback:</b></summary>
+        <summary><b>show/hide</b></summary>
         <p>
-
-        <!-- Paste the traceback from any exception (if there was one) in between the two triple quotes below -->
         ```
 
         ```
-
         </p>
         </details>
 
@@ -79,14 +76,30 @@ body:
     attributes:
       label: Output of pip freeze
       description: Paste the output of `pip freeze` below.
-      render: shell
+      value: |
+        <details>
+        <summary><b>show/hide</b></summary>
+        <p>
+        ```
+
+        ```
+        </p>
+        </details>
 
   - type: textarea
     id: cmd
     attributes:
-      label: Steps to reproduce
-      description: Add a fully runnable example below that will reproduce the bug.
-      render: shell
+      label: How to reproduce
+      description: Add a code example below that will reproduce the bug.
+      value: |
+        <details>
+        <summary><b>show/hide</b></summary>
+        <p>
+        ```
+
+        ```
+        </p>
+        </details>
 
   - type: checkboxes
     id: terms
