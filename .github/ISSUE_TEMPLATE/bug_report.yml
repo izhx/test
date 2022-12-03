@@ -42,14 +42,16 @@ body:
     id: traceback
     attributes:
       label: Python traceback
-      description: Paste the traceback from any exception (if there was one) in between the two triple quotes below.
+      description: Paste the traceback from any exception (if there was one) in between the two triple backticks (```) below.
       value: |
         <details>
         <summary><b>show/hide</b></summary>
         <p>
+
         ```
 
         ```
+
         </p>
         </details>
 
@@ -75,14 +77,16 @@ body:
     id: pip
     attributes:
       label: Output of pip freeze
-      description: Paste the output of `pip freeze` below.
+      description: Paste the output of `pip freeze` in between the two triple backticks (```) below.
       value: |
         <details>
         <summary><b>show/hide</b></summary>
         <p>
+
         ```
 
         ```
+
         </p>
         </details>
 
@@ -90,14 +94,16 @@ body:
     id: cmd
     attributes:
       label: How to reproduce
-      description: Add a code example below that will reproduce the bug.
+      description: Add a code example below that will reproduce the bug in between the two triple backticks (```) below.
       value: |
         <details>
         <summary><b>show/hide</b></summary>
         <p>
+
         ```
 
         ```
+
         </p>
         </details>
 
