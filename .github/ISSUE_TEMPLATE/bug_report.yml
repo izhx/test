@@ -14,7 +14,7 @@ body:
   - type: checkboxes
     id: checklist
     attributes:
-      label: Checklist before
+      label: Checklist before your report.
       description: Please check below terms.
       options:
         - label: I have verified that the issue exists against the `master` branch of AdaSeq.
@@ -43,7 +43,18 @@ body:
     attributes:
       label: Python traceback
       description: Paste the traceback from any exception (if there was one) below.
-      render: shell
+      render: markdown
+      value: |
+        <details>
+        <summary><b>Python traceback:</b></summary>
+        <p>
+
+        <!-- Paste the traceback from any exception (if there was one) in between the next two lines below -->
+        ```
+        ```
+
+        </p>
+        </details>
 
   - type: input
     id: os
