@@ -11,14 +11,22 @@ body:
         Please fill this template entirely. We reserve the right to close without a response bug reports which are incomplete.
         If you have a question rather than a bug, please ask on our DingTalk group rather than posting an issue here.
 
-  - type: input
-    id: contact
+  - type: checkboxes
+    id: checklist
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+      label: Checklist before
+      description: Please check below terms.
+      options:
+        - label: I have verified that the issue exists against the `master` branch of AdaSeq.
+          required: true
+        - label: I have read the relevant section in the [contribution guide](https://github.com/modelscope/adaseq/blob/master/.github/CONTRIBUTING.md) on reporting bugs.
+          required: true
+        - label: I have checked the [issues list](https://github.com/modelscope/adaseq/issues) for similar or identical bug reports.
+          required: true
+        - label: I have checked the [pull requests list](https://github.com/modelscope/adaseq/pulls) for existing proposed fixes.
+          required: true
+        - label: I have checked the [commit log](https://github.com/modelscope/adaseq/commits/master) to find out if the bug was already fixed in the master branch.
+          required: true
 
   - type: textarea
     id: what-happened
@@ -26,34 +34,47 @@ body:
       label: What happened?
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
-      value: "A bug happened!"
+
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+
   - type: textarea
-    id: logs
+    id: traceback
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      label: Python traceback
+      description: Paste the traceback from any exception (if there was one) below.
+      render: shell
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: Provide the name of operating system below.
+      placeholder: e.g. Windows 11, MacOS 12, Ubuntu 20.04
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      description: Provide the Python version you were using.
+      placeholder: e.g. 3.7.12
+    validations:
+      required: true
+
+  - type: textarea
+    id: pip
+    attributes:
+      label: Output of pip freeze
+      description: Paste the output of `pip freeze` below.
+      render: shell
+
+  - type: textarea
+    id: cmd
+    attributes:
+      label: Steps to reproduce
+      description: Add a fully runnable example below that will reproduce the bug.
       render: shell
 
   - type: checkboxes
