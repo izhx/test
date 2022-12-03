@@ -8,12 +8,8 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-
-        Please fill this template entirely.
-        We reserve the right to close without a response bug reports which are incomplete.
-
-        If you have a question rather than a bug, please ask on our DingTalk group
-        rather than posting an issue here.
+        Please fill this template entirely. We reserve the right to close without a response bug reports which are incomplete.
+        If you have a question rather than a bug, please ask on our DingTalk group rather than posting an issue here.
 
   - type: input
     id: contact
